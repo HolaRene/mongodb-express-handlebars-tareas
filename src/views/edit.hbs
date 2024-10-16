@@ -1,0 +1,39 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-5 offset-md-3'>
+      <div class='card card-body p-4 text-white bg-dark'>
+        <h1>Editar Tareas</h1>
+        {{! la ruta donde va a enviar al formulario }}
+        <form action='/tarea/{{tareas._id}}/editar' method='post'>
+          <div class='mb-3'>
+            <div>
+              <label for='titulo'>Tìtulo</label>
+              <input
+                type='text'
+                id='titulo'
+                class='form-control rounded-0 bg-dark text-white'
+                name='titulo'
+                placeholder='Escribe el titulo de la tarea'
+                value='{{tareas.titulo}}'
+              />
+            </div>
+          </div>
+          <div class='mb-3'>
+            <div>
+              <label for='titulo'>Descripciòn:</label>
+              <textarea
+                rows='3'
+                name='descripcion'
+                id='descripcion'
+                class='form-control rounded-0 bg-dark text-white'
+                placeholder='Escribe la descripcion de la tarea'
+              >{{tareas.descripcion}}</textarea>
+            </div>
+          </div>
+          <button class='btn btn-primary'>Guardar cambios</button>
+        </form>
+        {{! Editar tareas }}
+      </div>
+    </div>
+  </div>
+</div>
